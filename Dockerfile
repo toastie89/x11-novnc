@@ -41,7 +41,7 @@ RUN \
 RUN \
  mkdir -p /opt/noVNC/utils/websockify \
  && wget -qO- "http://github.com/kanaka/noVNC/tarball/master" \
- tar -zx --strip-components=1 -C /opt/noVNC \
+ | tar -zx --strip-components=1 -C /opt/noVNC \
  && wget -qO- "https://github.com/kanaka/websockify/tarball/master" \
  | tar -zx --strip-components=1 -C /opt/noVNC/utils/websockify \
  && ln -s /opt/noVNC/vnc_auto.html /opt/noVNC/index.html
