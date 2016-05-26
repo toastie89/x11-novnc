@@ -44,7 +44,7 @@ RUN \
     | tar -zx --strip-components=1 -C /opt/noVNC \
  && wget -qO- "https://github.com/kanaka/websockify/tarball/master" \
     | tar -zx --strip-components=1 -C /opt/noVNC/utils/websockify \
- && ln -s /opt/noVNC/vnc_auto.html /opt/noVNC/index.html
+ && ln -s /opt/noVNC/vnc.html /opt/noVNC/index.html
 
 
 # Configure & run supervisor
