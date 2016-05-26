@@ -26,7 +26,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN \
   apt-get update \
   && apt-get -y upgrade \
-  && apt-get -y --no-install-recommends install \
+  && apt-get -y install \
   xvfb \
   x11vnc \
   supervisor \
