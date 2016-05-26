@@ -26,12 +26,13 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN \
   apt-get update \
   && apt-get -y upgrade \
-  && apt-get -y install \
+  && apt-get -y --no-install-recommends install \
   xvfb \
   x11vnc \
   supervisor \
   fluxbox \
   wget \
+  ca-certificates \
   python \
   net-tools \
   && apt-get clean
